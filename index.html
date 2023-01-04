@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Javascript</title>
+</head>
+<body>
+    <h1 style="color: blue; font-size: x-large; font-style: oblique; font-weight: 100;text-align: center;"><u><b>Inheritance Prototype Javascript</b></u></u></h1>
+    <h2 style="color: rgb(0, 250, 83); font-size: x-large; font-style: normal;">Q1-Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype?</h2>
+    <pre style="color: crimson; font-size: x-large;">Ans-
+        const parentObj = {
+            calAge:function(){
+           console.log(`${this.fName},${this.lName},${this.age}`)
+            }
+          }
+          
+          const childObj=Object.create(parentObj);
+          childObj.fName="john",
+          childObj.lName="doe",
+          childObj.age=23;
+          childObj.calAge();
+          
+          
+          </pre>
+    <h2 style="color: rgba(0, 250, 83); font-size: x-large;">Q2-Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays?</h2>
+    <pre style="color: crimson; font-size: x-large;">Ans-
+        const calSum= {
+        returnSum:function(arr){
+          let sum=0;
+          for(let i =0;i<lt><</lt>arr.length;i++){
+            sum+=arr[i]
+          }
+          console.log(sum);
+        }
+      }
+      calSum.returnSum([1,2,55,6,8])
+      calSum.returnSum([1,2,655,6,90])
+      calSum.returnSum([1,56,55,78,8])
+      calSum.returnSum([12,12,67,6,8])
+      
+      </pre>
+    <h2 style="color: rgba(0,250,83); font-size: x-large;">Q3-Write code to explain prototype chaining?</h2>
+      <pre style="color: crimson; font-size: x-large;"> 
+        function Person() {
+        this.name = 'John'
+    }
+    
+    // adding property 
+    Person.prototype.name = 'Peter';
+    Person.prototype.age = 23
+    
+    const person1 = new Person();
+    
+    console.log(person1.name); // John
+    console.log(person1.age); // 23
+</pre>
+<h2 style="color: rgba(0, 250, 83); font-size: x-large;">Q5-Write a JavaScript function to retrieve all the names of object's own and inherited properties.?</h2>
+<pre style="color: crimson; font-size: x-large;">
+    
+        const user = {
+            name: 'Alex',
+            age: 30
+        }
+        const prop = Object.getOwnPropertyNames(user)
+
+        console.log(prop) // [ 'name', 'age' ]
+    
+</pre>
+
+</body>
+</html>
